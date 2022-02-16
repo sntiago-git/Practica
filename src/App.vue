@@ -1,10 +1,21 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <Header></Header>
+
+  <div class="main">
+    <router-view />
   </div>
-  <router-view/>
 </template>
+
+<script>
+import Header from "@/components/Header.vue";
+
+export default {
+
+  components: {
+    Header,
+  },
+};
+</script>
 
 <style>
 #app {
@@ -26,5 +37,9 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.main {
+  margin-top: 60px;
 }
 </style>
